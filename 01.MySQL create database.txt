@@ -1,0 +1,4 @@
+create database student;
+
+use table
+use student;
