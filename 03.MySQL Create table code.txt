@@ -1,0 +1,15 @@
+create table tablename (
+
+	id INT NULL UNIQUE,
+	name VARCHAR(50) NOT NULL,
+	age INT NULL CHECK (age>=18),
+	phone VARCHAR(13) NOT NULL UNIQUE
+
+);
+
+
+
+
+INSERT INTO personal(id, name, age, gender, phone, city)
+VALUES
+(2, "Emran Mahmud", 2, "M", 8801766989708, 'jasai')
