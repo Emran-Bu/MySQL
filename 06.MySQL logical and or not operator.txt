@@ -1,0 +1,43 @@
+view all table data command.
+SELECT * FROM personal;
+
+view specific table data command.
+SELECT id, name , phone FROM personal;
+
+view heading name change specific table data command.
+SELECT id as ID, name AS "Student Name" , phone as Phone FROM personal;
+
+comparison with search
+SELECT * FROM `personal` WHERE gender = "F";
+SELECT * FROM personal WHERE age >= 20;
+SELECT * FROM personal 
+WHERE city = "agra";
+
+SELECT * FROM personal 
+WHERE city != "agra";
+
+SELECT id, name FROM personal 
+WHERE city <> "agra";
+
+and operation
+
+SELECT * FROM personal 
+WHERE age <= 21 AND gender = "M" AND city = "agra";
+
+or operations
+
+SELECT * FROM personal 
+WHERE age <= 21 OR gender = "M" OR city = "agra";
+
+SELECT * FROM personal 
+WHERE (age <= 21 OR gender = "M" OR city = "agra") AND city = 'agra';
+
+not operations
+SELECT * FROM personal 
+WHERE NOT (age <= 21 OR gender = "M" OR city = "agra");
+
+SELECT * FROM personal
+WHERE NOT (city = "jasai" OR city = "agra");
+
+SELECT * FROM personal
+WHERE NOT age <= 21;
