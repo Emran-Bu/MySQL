@@ -1,0 +1,11 @@
+SELECT * FROM personal
+WHERE age in (18, 21, 22);
+
+SELECT * FROM personal
+WHERE age NOT IN (18, 21, 22)
+
+SELECT * FROM personal
+WHERE city NOT IN ("jasai")
+
+SELECT * FROM personal
+WHERE city IN ("agra")
