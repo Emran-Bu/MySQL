@@ -1,0 +1,21 @@
+SELECT * FROM personal
+where name LIKE "a%";
+where name LIKE "%a";
+where name LIKE "%am%";
+where name LIKE "%a%";
+where name LIKE "e%" or name LIKE "n%";
+
+where name NOT LIKE "a%";
+
+
+where phone LIKE "%707";
+
+where name LIKE "e%n";
+
+
+where name LIKE "_am%";
+where name LIKE "__r%";
+where name LIKE "m_a%";
+
+where BINARY name LIKE "a%"; //first leeter check smmal or capital
+where BINARY name LIKE "A%"; //first leeter check smmal or capital
