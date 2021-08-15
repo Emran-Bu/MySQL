@@ -1,0 +1,40 @@
+SELECT * FROM personal
+WHERE name REGEXP "ran";
+
+SELECT * FROM personal
+WHERE name REGEXP "r";
+
+
+SELECT * FROM personal
+WHERE name REGEXP "^su";
+
+SELECT * FROM personal
+WHERE name REGEXP "an$"
+
+SELECT * FROM personal
+WHERE name REGEXP "emran|Hasan|akter"
+
+SELECT * FROM personal
+WHERE name REGEXP "Hasan|akter"
+
+SELECT * FROM personal
+WHERE name REGEXP "^dilara|Hasan|akter$"
+
+SELECT * FROM personal
+WHERE name REGEXP "[wn]"
+
+
+SELECT * FROM personal
+WHERE name REGEXP "[wn]a"
+
+SELECT * FROM personal
+WHERE name REGEXP "[wn]$"
+
+SELECT * FROM personal
+WHERE name REGEXP "^[wn]"
+
+SELECT * FROM personal
+WHERE name REGEXP "[wnm]a"
+
+SELECT * FROM personal
+WHERE name REGEXP "[a - z]a"
