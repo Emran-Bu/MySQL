@@ -1,0 +1,18 @@
+SELECT * FROM personal
+ORDER BY name;
+
+SELECT * FROM personal
+ORDER BY age DESC;
+
+SELECT * FROM personal
+ORDER BY name DESC;
+
+SELECT * FROM personal
+where city = "agra"
+ORDER BY name DESC;
+
+SELECT * FROM personal
+ORDER BY name, age;
+
+SELECT DISTINCT city FROM personal;
+SELECT DISTINCT age FROM personal ORDER BY age;
