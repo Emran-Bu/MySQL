@@ -1,0 +1,17 @@
+SELECT * FROM personal 
+WHERE age BETWEEN 18 AND 21;
+
+SELECT * FROM personal 
+WHERE age NOT BETWEEN 18 AND 21
+
+SELECT * FROM personal 
+WHERE id BETWEEN 4 AND 10
+
+SELECT * FROM personal 
+WHERE name BETWEEN "a" AND "f";
+
+SELECT * FROM personal 
+WHERE name BETWEEN "Eshita" AND "sumaiya akter"
+
+SELECT * FROM personal 
+WHERE date BETWEEN "1995-01-01" AND "2005-01-01";
