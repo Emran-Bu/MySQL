@@ -1,0 +1,17 @@
+SELECT * FROM personal=
+LIMIT 3;
+
+SELECT * FROM personal
+WHERE age = "22"
+LIMIT 3;
+
+SELECT * FROM personal
+WHERE city = "jasai"
+ORDER BY age
+LIMIT 3;
+
+SELECT * FROM personal
+LIMIT 3, 3;
+
+SELECT * FROM personal
+LIMIT 0, 3
