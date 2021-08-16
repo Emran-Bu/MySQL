@@ -1,0 +1,10 @@
+SELECT COUNT(*) FROM personal
+SELECT COUNT(name) FROM personal
+SELECT MAX(age) FROM personal
+SELECT MIN(age) FROM personal
+SELECT SUM(age) FROM personal
+SELECT AVG(age) FROM personal
+
+
+SELECT COUNT(city) FROM personal
+SELECT COUNT(DISTINCT city) FROM personal
