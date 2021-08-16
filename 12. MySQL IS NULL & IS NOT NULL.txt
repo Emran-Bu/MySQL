@@ -1,0 +1,5 @@
+SELECT * FROM personal
+WHERE age IS NOT null
+
+SELECT * FROM personal
+WHERE age IS null
