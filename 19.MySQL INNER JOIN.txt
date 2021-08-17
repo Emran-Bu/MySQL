@@ -1,0 +1,26 @@
+table 1 and table 2 only matched value show 
+
+SELECT * FROM summary
+INNER JOIN city
+ON summary.city = city.cid;
+
+SELECT * FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+JOIN city c
+ON s.city = c.cid
+WHERE c.city_name = "Dhaka"
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+JOIN city c
+ON s.city = c.cid
+WHERE c.city_name = "Dhaka"
