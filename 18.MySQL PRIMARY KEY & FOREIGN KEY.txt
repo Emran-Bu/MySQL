@@ -1,0 +1,44 @@
+CREATE TABLE city(
+
+    cid INT NOT null AUTO_INCREMENT,
+    city_name varchar(50) NOT null,
+    PRIMARY KEY (cid)
+    
+);
+
+INSERT INTO city(city_name)
+
+VALUES("Dinajpur"),
+("Dhaka"),
+("Gazipur"),
+("tangail"),
+("Bogura"),
+("Gaibandha");
+
+
+
+
+
+CREATE TABLE summary(
+
+    id INT NOT null,
+    name varchar(50) NOT null,
+    marks int NOT null,
+    age int NOT null,
+    gender varchar(1) NOT null,
+    city int NOT null,
+    PRIMARY KEY (id),
+    FOREIGN KEY (city) REFERENCES city (cid)
+    
+);
+
+INSERT INTO summary(id, name, marks, age, gender, city)
+
+VALUES(1, "Emran Hasan", 98, 21, "M", 1),
+(2, "Eshita Rahman", 80, 18, "F", 2),
+(3, "Salman Khan", 75, 23, "M", 4),
+(4, "Sarita Kumari", 62, 22, "F", 6),
+(5, "John Abraham", 55, 20, "M", 3),
+(6, "Juhi Chawla", 47, 19, "F", 5),
+(7, "Anil Kapoor", 60, 24, "M", 4),
+(8, "Nabila Nur", 85, 22, "F", 3);
