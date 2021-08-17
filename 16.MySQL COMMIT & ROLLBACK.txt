@@ -1,0 +1,14 @@
+SELECT * FROM personal;
+
+COMMIT;
+
+UPDATE personal
+SET age = 26
+WHERE id = 6;
+
+UPDATE personal
+SET name = "rohim"
+WHERE id = 6;
+
+ROLLBACK;
+
