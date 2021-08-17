@@ -1,0 +1,8 @@
+DELETE FROM personal
+WHERE id = 0;
+
+DELETE FROM personal
+WHERE gender = "F";
+
+DELETE FROM personal
+WHERE age > 20;
