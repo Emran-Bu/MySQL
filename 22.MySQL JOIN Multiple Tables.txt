@@ -1,0 +1,56 @@
+CREATE TABLE course(
+
+    course_id int NOT null AUTO_INCREMENT,
+    course_name varchar(50),
+    PRIMARY key (course_id)
+
+);
+
+
+INSERT INTO course (course_name)
+VALUES ("Computer"),
+("Electrical"),
+("Architecture"),
+("Civil")
+
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, s.course, c.city_name
+FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, s.course, cr.course_name, c.city_name
+FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+
+INNER JOIN course cr
+ON s.course = cr.course_id
+ORDER BY `id` ASC
+
+
+CREATE TABLE summary(
+
+    id INT NOT null,
+    name varchar(50) NOT null,
+    marks int NOT null,
+    age int NOT null,
+    gender varchar(1) NOT null,
+    course int NOT null,
+    city int NOT null,
+    PRIMARY KEY (id),
+    FOREIGN KEY (city) REFERENCES city (cid),
+    FOREIGN KEY (course) REFERENCES course (course_id)
+    
+);
+
+INSERT INTO summary(id, name, marks, age, gender, course,city)
+
+VALUES(1, "Emran Hasan", 98, 21, "M", 1, 1),
+(2, "Eshita Rahman", 80, 18, "F", 3, 2),
+(3, "Salman Khan", 75, 23, "M", 2, 4),
+(4, "Sarita Kumari", 62, 22, "F", 4, 6),
+(5, "John Abraham", 55, 20, "M", 1, 3),
+(6, "Juhi Chawla", 47, 19, "F", 3, 5),
+(7, "Anil Kapoor", 60, 24, "M", 2, 4),
+(8, "Nabila Nur", 85, 22, "F", 1, 3);
