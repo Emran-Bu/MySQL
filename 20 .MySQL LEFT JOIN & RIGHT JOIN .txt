@@ -1,0 +1,29 @@
+Left Join
+table 1 and table 2 Table 1(Foreign Key ) only all value show // match or non-match
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+LEFT JOIN city c
+ON s.city = c.cid
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+LEFT JOIN city c
+ON s.city = c.cid
+WHERE c.city_name = "dinajpur"
+order by s.name ASC DESC
+
+Right Join
+table 1 and table 2 only Table 2(Primary Key ) all value show // match or non-match
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+RIGHT JOIN city c
+ON s.city = c.cid
+
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+RIGHT JOIN city c
+ON s.city = c.cid
+WHERE c.city_name = "dinajpur"
+order by s.name ASC DESC
