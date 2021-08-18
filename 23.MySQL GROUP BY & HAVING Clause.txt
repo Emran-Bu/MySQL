@@ -1,0 +1,22 @@
+SELECT city, COUNT(city) FROM summary
+GROUP BY city
+
+SELECT c.city_name, COUNT(s.city) FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+GROUP BY city
+
+SELECT c.city_name, COUNT(s.city) FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+where s.age >= 17
+GROUP BY city
+order by COUNT(s.city)
+
+SELECT c.city_name, COUNT(s.city) FROM summary s
+INNER JOIN city c
+ON s.city = c.cid
+where s.age >= 17
+GROUP BY city
+HAVING COUNT(s.city) >= 2
+order by COUNT(s.city)
