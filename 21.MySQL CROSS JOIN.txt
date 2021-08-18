@@ -1,0 +1,3 @@
+SELECT s.id, s.name, s.marks, s.age, s.gender, c.city_name
+FROM summary s
+CROSS JOIN city
