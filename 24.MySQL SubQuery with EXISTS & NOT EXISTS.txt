@@ -1,0 +1,19 @@
+SELECT course_id FROM course WHERE course_name = "computer"
+
+SELECT name FROM summary
+WHERE course = (SELECT course_id FROM course WHERE course_name = "computer")
+
+SELECT name FROM summary
+WHERE course IN (SELECT course_id FROM course WHERE course_name in ("electrical", "civil"))
+
+SELECT name FROM summary
+WHERE EXISTS (SELECT course_id FROM course WHERE course_name in ("electrical"))
+
+SELECT name FROM summary
+WHERE NOT EXISTS (SELECT course_id FROM course WHERE course_name in ("electrical"))
+
+SELECT name FROM summary
+WHERE NOT EXISTS (SELECT course_id FROM course WHERE course_name in ("electronics"))
+
+SELECT name FROM summary
+WHERE EXISTS (SELECT course_id FROM course WHERE course_name in ("electronics"))
