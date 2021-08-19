@@ -1,0 +1,67 @@
+SELECT 5 + 6
+SELECT 5 + 6 as total
+SELECT 5 - 6
+SELECT 5 * 6
+SELECT 5 / 6
+SELECT 5 % 6
+SELECT 5 MOD 6
+SELECT 5 DIV 6
+
+SELECT id, name, (age + 5) AS Age FROM Table_Name
+
+SELECT id, name, marks, RAND()
+FROM Table_Name
+
+SELECT id, name, marks
+FROM Table_Name
+order by RAND();
+
+SELECT PI();
+
+SELECT ROUND(4.45); result = 4
+SELECT ROUND(4.55); result = 5
+SELECT ROUND(-4.45); result = -4
+SELECT ROUND(-4.55); result = -5
+SELECT ROUND(1234.987, 2); result = 1234.99
+
+SELECT FLOOR(4.45); result = 4
+SELECT FLOOR(4.55); result = 4
+SELECT FLOOR(-4.45); result = -4
+SELECT FLOOR(-4.55); result = -4
+
+SELECT CEIL(4.45); result = 5
+SELECT CEIL(4.55); result = 5
+SELECT CEIL(-4.45); result = -5
+SELECT CEIL(-4.55); result = -5
+
+SELECT POW(2, 2); result = 4
+SELECT POW(4, 2); result = 16
+SELECT POW(-4, 2); result = 16
+SELECT POW(5, 3); result = 75
+
+SELECT SQRT(4); result = 2
+SELECT SQRT(4); result = 16
+SELECT ROUND(SQRT(5)); result = 2
+SELECT SQRT(64); result = 8
+
+SELECT ABS(4); result = 4
+SELECT ABS(-45); result = 45
+SELECT ABS(555.5555); result = 555.5555
+SELECT ABS(-555.5555); result = -555.5555
+
+SELECT SIGN(4); result = 1
+SELECT SIGN(-45); result = -1
+SELECT SIGN(0); result = 0
+SELECT SIGN(-0); result = 0
+SELECT SIGN(555.5555); result = 1
+SELECT SIGN(-555.5555); result = -1
+
+SELECT RAND();
+SELECT RAND() * 10;
+SELECT FLOOR(RAND() * 10);
+SELECT CEIL(RAND() * 10);
+SELECT FLOOR (10 + (RAND() * 10));
+SELECT ROUND (1 + (RAND() * 5));
+
+SELECT 10 + (FLOOR(RAND() * 10));
+SELECT 1 + (ROUND(RAND() * 5));
