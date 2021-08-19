@@ -1,0 +1,19 @@
+select * from table1
+union
+select * from table1
+
+select * from table1
+union all
+select * from table1
+
+select name, age table1
+union
+select name, age table1
+
+select name, age table1
+union all
+select name, age table1
+
+select name, age table1 where gender = "M"
+union all
+select name, age table1 where gender = "M"
