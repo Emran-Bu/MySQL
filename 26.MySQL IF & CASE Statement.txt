@@ -1,0 +1,24 @@
+SELECT id, name, marks,
+IF (marks >=33, "pass", "fail") AS Result
+FROM summary
+
+UPDATE summary
+SET marks = (CASE id
+
+	WHEN 5 THEN 85
+	WHEN 8 THEN 120
+
+END)
+WHERE id IN (5, 8);
+
+
+SELECT id, name, marks,
+CASE
+    WHEN marks >=80 AND marks <=100 THEN "Golden"
+    WHEN marks >=60 AND marks <=80 THEN "First Division"
+    WHEN marks >=45 AND marks <=60 THEN "Second Division"
+    WHEN marks >=33 AND marks <=45 THEN "Third Division"
+    WHEN marks <=33 THEN "Fail"
+    ELSE "Not Correct Marks"
+END AS Grade
+FROM summary
