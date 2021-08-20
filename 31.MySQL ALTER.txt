@@ -1,0 +1,33 @@
+//add column
+
+ALTER TABLE personal
+ADD Email varchar(255)
+
+//after column
+ALTER TABLE personal
+MODIFY Email varchar(255)
+AFTER name
+
+//modify column
+ALTER TABLE personal
+MODIFY Email INT(255)
+
+//unique column
+ALTER TABLE personal
+ADD UNIQUE(Email)
+
+//change column name
+ALTER TABLE personal
+CHANGE Email Email_ID varchar(255)
+
+//drop column
+ALTER TABLE personal
+DROP COLUMN Email_ID
+
+//rename table
+ALTER TABLE personal
+RENAME personal
+
+//auto increment
+ALTER TABLE personal
+AUTO_INCREMENT = 4;
