@@ -1,0 +1,95 @@
+SELECT id, UPPER(name), marks
+FROM summary
+
+SELECT id, UCASE(name), marks
+FROM summary
+
+SELECT id, LOWER(name), marks
+FROM summary
+
+SELECT id, LCASE(name), marks
+FROM summary
+
+SELECT id, name, CHARACTER_LENGTH(name) AS Characters
+FROM summary
+
+SELECT id, name, CHAR_LENGTH(name) AS Characters
+FROM summary
+
+SELECT id, name, LENGTH(name) AS Characters
+FROM summary
+
+SELECT CONCAT("HELLO", "WORLD");
+SELECT CONCAT("HELLO", "-" , "WORLD") AS Name;
+SELECT CONCAT_WS("-" ,"HELLO", "WORLD");
+
+SELECT id, name, CONCAT(name, marks) AS Name
+FROM summary
+SELECT id, name, CONCAT(name, "-", marks) AS Name
+FROM summary
+SELECT id, name, CONCAT_WS(name, marks) AS Name
+FROM summary
+SELECT id, name, CONCAT_WS("-", name, marks) AS Name
+FROM summary
+
+SELECT LTRIM("       Hello     ")
+SELECT RTRIM("       Hello     ")
+SELECT TRIM("       Hello     ")
+
+SELECT POSITION("World" IN "Hello World")
+SELECT POSITION("e" IN "Hello World")
+
+SELECT INSTR("Hello World", "a")
+SELECT INSTR("Hello World", "World")
+
+SELECT LOCATE("llo", "Hello World")
+SELECT LOCATE("e", "Hello World")
+SELECT LOCATE("lo", "Hello World", 3)
+
+SELECT SUBSTRING("Hello World", 5) AS Name
+SELECT SUBSTRING("Hello World", 3, 6)
+SELECT SUBSTR("Hello World", -3, 6)
+SELECT MID("Hello World", 3, 6)
+
+SELECT SUBSTRING_INDEX("www.HelloWorld.com", ".", 5) AS Name
+SELECT SUBSTRING_INDEX("www.HelloWorld.com", "o", 5)
+
+SELECT LEFT("Hello World", 6)
+SELECT LEFT("Hello World", 3)
+
+SELECT RIGHT("Hello World", 6)
+SELECT RIGHT("Hello World", 3)
+
+SELECT RPAD("Hello World", 20, "-")
+SELECT RPAD("Hello World", 23, "abcdef")
+
+SELECT LPAD("Hello World", 20, "*")
+SELECT LPAD("Hello World", 23, "15347684")
+
+SELECT SPACE(100)
+SELECT SPACE(100)
+
+SELECT REVERSE("Hello World")
+
+SELECT REPLACE("Hello World", "World", "earth")
+SELECT REPLACE("Hello World World", "World", "earth")
+
+SELECT REPLACE("Hello World", "World", "earth")
+SELECT REPLACE("Hello World World", "World", "earth")
+
+SELECT STRCMP("Hello World", "Hello World")
+SELECT STRCMP("Hello World", "Hello")
+SELECT STRCMP("Hello World World", "Hello World")
+
+SELECT FIELD("H", "e", "l", "h", "e")
+SELECT FIELD("Hmm", "hmm", "lar", "har", "earn")
+SELECT FIELD(5, 0, 1, 2, 3)
+
+SELECT FIND_IN_set("H", "e,l,h,e")
+SELECT FIND_IN_set("Hmm", "hmm,lar,har,earn")
+
+SELECT FORMAT(255.3568, 2) AS Value
+SELECT FORMAT(255.35689, 3) AS Value
+
+SELECT HEX("Hello World")
+SELECT HEX("Emran Hasan")
