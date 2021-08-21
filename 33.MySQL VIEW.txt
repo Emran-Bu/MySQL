@@ -1,0 +1,30 @@
+SELECT id, name, course_name FROM summary s
+INNER JOIN course c
+ON s.course = c.course_id
+
+CREATE VIEW studentdata
+AS
+SELECT id, name, course_name FROM summary s
+INNER JOIN course c
+ON s.course = c.course_id
+
+CREATE VIEW studentdata2
+AS
+SELECT id, name, course_name, city_name FROM summary s
+INNER JOIN course c
+ON s.course = c.course_id
+INNER JOIN city ci
+ON s.city = ci.cid
+
+CREATE OR REPLACE VIEW studentdata
+AS
+SELECT id, name, course_name, city_name FROM summary s
+INNER JOIN course c
+ON s.course = c.course_id
+INNER JOIN city ci
+ON s.city = ci.cid
+
+RENAME TABLE studentdata
+TO studentcourse
+
+DROP VIEW studentdata2;
