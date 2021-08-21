@@ -1,0 +1,3 @@
+ALTER TABLE `course`
+DROP PRIMARY KEY,
+ADD PRIMARY KEY(`course_id`);
