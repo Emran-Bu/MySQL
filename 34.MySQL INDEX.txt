@@ -1,0 +1,10 @@
+SELECT * FROM students
+WHERE date > "1999-01-01";
+
+CREATE INDEX studdob ON students (dob);
+
+
+SHOW INDEX FROM students;
+
+
+DROP INDEX studdob ON students;
