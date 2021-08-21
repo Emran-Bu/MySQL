@@ -1,0 +1,5 @@
+//all table data remove
+TRUNCATE TABLE courses;
+
+//full table remove
+DROP TABLE courses;
