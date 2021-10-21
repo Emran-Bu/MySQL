@@ -24,3 +24,8 @@ FROM summary s
 JOIN city c
 ON s.city = c.cid
 WHERE c.city_name = "Dhaka"
+
+oop_crud db
+SELECT s.id, s.name, s.age, s.city, d.dname FROM students s
+JOIN departments d
+ON s.department = d.did
